@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <link rel="stylesheet" href="../styles/add_employee.css" />
+  <link rel="stylesheet" href="../styles/dasboard.css" />
+  <style>
+    /* Add styles if needed */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="material-symbols-outlined logo-img"> person </span>
+      <div class="text">
+        <span class="employee">EMPLOYEE</span>
+        <span class="payroll">PAYROLL</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <!-- Heading Section -->
+      <div class="heading-section">
+        <h2>Employee Payroll Form</h2>
+      </div>
+
+      <!-- Form Section -->
+      <form id="employee-form" class="form-section" autocomplete="off">
+        <div class="form-flex">
+          <!-- Form Row -->
+          <div class="form-row">
+            <label for="name">Name</label>
+            <div class="input-container">
+              <input type="text" id="name" name="name" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="profile-image">Profile Image</label>
+            <div class="input-container">
+              <div class="profile-radio">
+                <!-- Add profile image radio buttons here -->
+                <div class="radio-element">
+                  <input type="radio" name="profile-image" value="image1" />
+                  <img src="https://lh3.googleusercontent.com/a/AEdFTp4MagdqiXv0SXwiy2kXeuNXd3TS653FSdhoMVY-sQ=s96-c" alt="Profile Image" />
+                </div>
+                <div class="radio-element">
+                  <input type="radio" name="profile-image" value="image2" />
+                  <img src="https://lh3.googleusercontent.com/a/AEdFTp4MagdqiXv0SXwiy2kXeuNXd3TS653FSdhoMVY-sQ=s96-c" alt="Profile Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="gender">Gender</label>
+            <div class="input-container gender-container">
+              <input class="bullet" type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input class="bullet" type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+              <input class="bullet" type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="department">Department</label>
+            <div class="input-container department-container">
+              <input class="bullet" type="checkbox" id="hr" name="department" value="HR" />
+              <label class="lbl" for="hr">HR</label>
+              <input class="bullet" type="checkbox" id="it" name="department" value="IT" />
+              <label class="lbl" for="it">IT</label>
+              <input class="bullet" type="checkbox" id="finance" name="department" value="Finance" />
+              <label class="lbl" for="finance">Finance</label>
+              <input class="bullet" type="checkbox" id="other-dept" name="department" value="Other" />
+              <label class="lbl" for="other-dept">Other</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="salary">Salary</label>
+            <div class="input-container">
+              <select id="salary" name="salary">
+                <option value="" disabled selected>Select Salary Range</option>
+                <!-- Integer options from 10,000 to 200,000 -->
+                <option value="10000">10,000</option>
+                <option value="20000">20,000</option>
+                <option value="30000">30,000</option>
+                <option value="40000">40,000</option>
+                <option value="50000">50,000</option>
+                <option value="60000">60,000</option>
+                <option value="70000">70,000</option>
+                <option value="80000">80,000</option>
+                <option value="90000">90,000</option>
+                <option value="100000">100,000</option>
+                <option value="110000">110,000</option>
+                <option value="120000">120,000</option>
+                <option value="130000">130,000</option>
+                <option value="140000">140,000</option>
+                <option value="150000">150,000</option>
+                <option value="160000">160,000</option>
+                <option value="170000">170,000</option>
+                <option value="180000">180,000</option>
+                <option value="190000">190,000</option>
+                <option value="200000">200,000</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="start-date">Start Date</label>
+            <div class="input-container" id="start-date">
+              <select name="day" id="day">
+                <option value="" disabled selected>Day</option>
+              </select>
+              <select name="month" id="month">
+                <option value="" disabled selected>Month</option>
+              </select>
+              <select name="year" id="year">
+                <option value="" disabled selected>Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">Notes</label>
+            <div class="input-container">
+              <textarea id="notes" name="notes" rows="4" cols="30"></textarea>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="btn-container">
+        <button id="cancle-btn">Cancel</button>
+        <div>
+          <button class="submit" id="submit-btn">Submit</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../scripts/add-employee.js"></script>
+</html>

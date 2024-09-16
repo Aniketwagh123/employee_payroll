@@ -1,0 +1,165 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography System */
+/* 14px */
+/* 16px */
+/* 20px */
+/* 24px */
+/* Spacing System */
+/* 8px */
+/* 16px */
+/* 24px */
+/* 32px */
+/* 64px */
+/* Color Palette */
+/* Border and Shadows */
+/* 8px */
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background: #f4f4f4;
+  color: #3d3d3d;
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2rem;
+  background-color: #f4f4f4;
+}
+.header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Actions */
+.actions input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+.actions button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.actions button:hover {
+  background-color: #3d8b40;
+}
+
+/* Container */
+.container {
+  padding-inline: 2rem;
+}
+
+/* Table */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+table th,
+table td {
+  padding: 0.5rem;
+  text-align: left;
+}
+table th {
+  background-color: #42515f;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+table tr {
+  background-color: #fff;
+}
+table tr:last-child {
+  border-bottom: none; /* Removes the border for the last row */
+}
+table td {
+  font-size: 1rem;
+}
+table tbody tr td {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* Profile Images */
+.person-img {
+  border-radius: 50%;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  margin-left: 1rem;
+}
+
+/* Departments */
+.departments {
+  color: #3d3d3d;
+  background-color: #e9fea5;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+  background-color: #ffffff;
+}
+.logo .logo-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #c5dec5;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #42515f;
+}
+.logo .logo-img .material-symbols-outlined {
+  height: 50px;
+  cursor: pointer;
+}
+.logo .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #82a70c;
+}
+
+.payroll {
+  font-size: 1.5rem;
+  color: #42515f;
+}
+
+/* Action Icons */
+.material-symbols-outlined {
+  font-size: 1.5rem; /* 24px */
+  cursor: pointer;
+}
+
+.del-space {
+  margin-right: 1rem;
+}/*# sourceMappingURL=dasboard.css.map */

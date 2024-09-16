@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "profileImage": "https://example.com/images/alice.jpg",
+        "gender": "Female",
+        "departments": ["HR", "Recruitment"],
+        "salary": 55000,
+        "startDate": "01-01-2023",
+        "notes": "Experienced HR specialist."
+    },
+    {
+        "id": 2,
+        "name": "Bob Smith",
+        "profileImage": "https://example.com/images/bob.jpg",
+        "gender": "Male",
+        "departments": ["IT", "Support"],
+        "salary": 60000,
+        "startDate": "15-03-2022",
+        "notes": "Excellent troubleshooting skills."
+    },
+    {
+        "id": 3,
+        "name": "Carol Davis",
+        "profileImage": "https://example.com/images/carol.jpg",
+        "gender": "Female",
+        "departments": ["Marketing", "Sales"],
+        "salary": 70000,
+        "startDate": "20-07-2021",
+        "notes": "Strong background in digital marketing."
+    },
+    {
+        "id": 4,
+        "name": "David Brown",
+        "profileImage": "https://example.com/images/david.jpg",
+        "gender": "Male",
+        "departments": ["Finance", "Accounting"],
+        "salary": 75000,
+        "startDate": "10-12-2020",
+        "notes": "Detail-oriented accountant."
+    },
+    {
+        "id": 5,
+        "name": "Eva Green",
+        "profileImage": "https://example.com/images/eva.jpg",
+        "gender": "Female",
+        "departments": ["Engineering", "R&D"],
+        "salary": 80000,
+        "startDate": "05-11-2019",
+        "notes": "Innovative software engineer."
+    },
+    {
+        "id": 6,
+        "name": "Frank Miller",
+        "profileImage": "https://example.com/images/frank.jpg",
+        "gender": "Male",
+        "departments": ["Logistics", "Supply Chain"],
+        "salary": 65000,
+        "startDate": "22-06-2022",
+        "notes": "Skilled in supply chain management."
+    },
+    {
+        "id": 7,
+        "name": "Grace Wilson",
+        "profileImage": "https://example.com/images/grace.jpg",
+        "gender": "Female",
+        "departments": ["Legal", "Compliance"],
+        "salary": 72000,
+        "startDate": "30-08-2021",
+        "notes": "Experienced legal advisor."
+    },
+    {
+        "id": 8,
+        "name": "Henry Lewis",
+        "profileImage": "https://example.com/images/henry.jpg",
+        "gender": "Male",
+        "departments": ["Customer Service", "Support"],
+        "salary": 58000,
+        "startDate": "12-09-2023",
+        "notes": "Excellent customer service skills."
+    },
+    {
+        "id": 9,
+        "name": "Ivy Martinez",
+        "profileImage": "https://example.com/images/ivy.jpg",
+        "gender": "Female",
+        "departments": ["Design", "Creative"],
+        "salary": 67000,
+        "startDate": "25-05-2022",
+        "notes": "Creative graphic designer."
+    },
+    {
+        "id": 10,
+        "name": "Jack Taylor",
+        "profileImage": "https://example.com/images/jack.jpg",
+        "gender": "Male",
+        "departments": ["Administration", "Office Management"],
+        "salary": 63000,
+        "startDate": "18-02-2020",
+        "notes": "Efficient office manager."
+    }
+]

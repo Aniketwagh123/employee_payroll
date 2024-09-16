@@ -1,0 +1,193 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography System */
+$font-size-small: 0.875rem; /* 14px */
+$font-size-base: 1rem; /* 16px */
+$font-size-large: 1.25rem; /* 20px */
+$font-size-xlarge: 1.5rem; /* 24px */
+
+$font-family-base: "Arial", sans-serif;
+
+/* Spacing System */
+$space-xs: 0.5rem; /* 8px */
+$space-sm: 1rem; /* 16px */
+$space-md: 1.5rem; /* 24px */
+$space-lg: 2rem; /* 32px */
+$space-xl: 4rem; /* 64px */
+
+/* Color Palette */
+$color-primary: #4caf50;
+$color-secondary: #42515f;
+$color-neutral-light: #f4f4f4;
+$color-neutral-dark: #3d3d3d;
+$color-accent: #82a70c;
+
+/* Border and Shadows */
+$border-radius: 0.5rem; /* 8px */
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* Body */
+body {
+  font-family: $font-family-base;
+  background: $color-neutral-light;
+  color: $color-neutral-dark;
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: $space-lg;
+  background-color: $color-neutral-light;
+
+  h1 {
+    font-size: $font-size-large;
+    font-weight: 700;
+  }
+}
+
+/* Actions */
+.actions {
+  input {
+    padding: $space-xs;
+    margin-right: $space-xs;
+    border-radius: $border-radius;
+    border: 1px solid #ddd;
+  }
+
+  button {
+    padding: $space-xs $space-sm;
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+}
+
+/* Container */
+.container {
+  padding-inline: $space-lg;
+}
+
+/* Table */
+table {
+  width: 100%;
+  margin-top: $space-sm;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+
+  th,
+  td {
+    padding: $space-xs;
+    text-align: left;
+  }
+
+  th {
+    background-color: $color-secondary;
+    color: #fff;
+    font-size: $font-size-base;
+    text-transform: uppercase;
+  }
+
+  tr {
+    background-color: #fff;
+
+    &:last-child {
+      border-bottom: none; /* Removes the border for the last row */
+    }
+  }
+
+  td {
+    font-size: $font-size-base;
+  }
+  tbody {
+    tr {
+      td {
+        border-bottom: 1px solid #e3e3e3;
+      }
+    }
+  }
+}
+
+/* Profile Images */
+.person-img {
+  border-radius: 50%;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  margin-left: $space-sm;
+}
+
+/* Departments */
+.departments {
+  color: $color-neutral-dark;
+  background-color: #e9fea5;
+  border-radius: $border-radius*2;
+  padding: $space-xs;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  padding-block: $space-md;
+  padding-inline: $space-lg;
+  background-color: #ffffff;
+
+  .logo-img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #c5dec5;
+    margin-right: $space-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-secondary;
+    .material-symbols-outlined {
+      height: 50px;
+      cursor: pointer;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.employee {
+  font-size: $font-size-xlarge;
+  font-weight: bold;
+  color: $color-accent;
+}
+
+.payroll {
+  font-size: $font-size-xlarge;
+  color: $color-secondary;
+}
+
+/* Action Icons */
+.material-symbols-outlined {
+  font-size: 1.5rem; /* 24px */
+  cursor: pointer;
+}
+
+.del-space {
+  margin-right: $space-sm;
+}
