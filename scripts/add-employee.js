@@ -168,18 +168,44 @@ function populateDateFields() {
   }
 }
 
-function addEmployee(employeeData) {
-  return $.ajax({
-    url: apiUrl,
-    type: "POST",
-    data: JSON.stringify(employeeData),
-    contentType: "application/json",
-  });
-}
-
 $(document).ready(function () {
   populateDateFields();
   $("#employee-form")[0].reset();
+
+  // Check if the page is in edit mode
+  const urlParams = new URLSearchParams(window.location.search);
+  const employeeId = urlParams.get("id");
+
+  if (employeeId) {
+    // Fetch employee data and populate form fields
+    $.get(`${apiUrl}/${employeeId}`)
+      .done(function (employee) {
+        $("#name").val(employee.name);
+        $('input[name="profile-image"][value="' + employee.profileImage + '"]').prop('checked', true);
+        console.log(employee.profileImage)
+        $('input[name="gender"][value="' + employee.gender.toLowerCase() + '"]').prop('checked', true);
+        console.log(employee.gender.toLowerCase())
+
+        employee.departments.forEach((dept) => {
+          $('input[name="department"][value="' + dept + '"]').prop('checked', true);
+        });
+        $("#salary").val(employee.salary);
+
+        const [day, month, year] = employee.startDate.split("-");
+        console.log(employee.startDate.split("-"))
+        $("#day").val(+day);
+        $("#month").val(+month);
+        $("#year").val(year);
+
+        $("#notes").val(employee.notes);
+        
+        // Change submit button to "Update Employee"
+        $("#submit-btn").text("Update Employee");
+      })
+      .fail(function () {
+        alert("Failed to load employee data.");
+      });
+  }
 
   $("#reset-btn").click(function () {
     $("#employee-form")[0].reset();
@@ -229,25 +255,48 @@ $(document).ready(function () {
       notes,
     };
 
-    // Add new employee to the server
-    addEmployee(employeeData)
-      .done(function () {
-        // Clear the form
-        $("#employee-form")[0].reset();
-
-        // Show success popup
-        alert("Employee successfully added!");
-
-        // Log the updated employee list to console
-        console.log("Employee added:", employeeData);
-      })
-      .fail(function () {
-        alert("Failed to add employee.");
-      });
+    if (employeeId) {
+      // Update existing employee
+      updateEmployee(employeeId, employeeData)
+        .done(function () {
+          alert("Employee successfully updated!");
+          window.location.href = "dasboard.html"; // Redirect to dashboard
+        })
+        .fail(function () {
+          alert("Failed to update employee.");
+        });
+    } else {
+      // Add new employee
+      addEmployee(employeeData)
+        .done(function () {
+          alert("Employee successfully added!");
+          window.location.href = "dasboard.html"; // Redirect to dashboard
+        })
+        .fail(function () {
+          alert("Failed to add employee.");
+        });
+    }
   });
 
   $("#cancle-btn").click(function () {
-    window.location.href =
-      "/Users/aniketwagh/Documents/python-CFP/repositories/project/employee_payroll/pages/dasboard.html";
+    window.location.href = "dasboard.html";
   });
 });
+
+function addEmployee(employeeData) {
+  return $.ajax({
+    url: apiUrl,
+    type: "POST",
+    data: JSON.stringify(employeeData),
+    contentType: "application/json",
+  });
+}
+
+function updateEmployee(id, employeeData) {
+  return $.ajax({
+    url: `${apiUrl}/${id}`,
+    type: "PUT",
+    data: JSON.stringify(employeeData),
+    contentType: "application/json",
+  });
+}
